@@ -1,0 +1,35 @@
+  
+<div class="text-center bg-light container-fluid">
+    <h1> ng-select:</h1>
+
+  <form [formGroup]="Form" (ngSubmit)="onPost()">
+
+      <label>Fruits List</label>
+
+      <ng-select formControlName="fruitlist" class="wid">
+
+          <ng-option *ngFor="let Fruit of Fruits" [value]="Fruit.name">
+              {{Fruit.id | json}}
+          </ng-option>
+      </ng-select>
+      <br>
+      <label>Languages-List</label>
+      <ng-select formControlName="languages" class="wid" >
+
+        <ng-option *ngFor="let Fruit of lang" [value]="Fruit.langname">
+            {{Fruit.id | json}}
+        </ng-option>
+    </ng-select>
+      <label>description</label>
+      <div class="">
+          <textarea formControlName="description" ></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit/Save</button>
+      <div *ngIf="isSubmit" class="">{{Form.value | json}}</div>
+
+  </form>
+</div>
+<!--
+    this path use in style.css file : 
+     @import "/node_modules/@ng-select/ng-select/themes/default.theme.css"; 
+    -->

@@ -1,0 +1,41 @@
+
+.img{
+    background-image:url('../assets/Angular-16.png') ;
+    background-repeat: no-repeat;
+    background-size:500vh;
+    opacity: 0.9;
+
+}
+
+.text{
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color:rgb(223, 19, 155);
+    -webkit-padding-start: 80px;
+padding-left: 40px;
+text-shadow: rgb(228, 231, 26);
+/* font-size: 0px; */
+/* font-weight: 90px; */
+/* -webkit-text-stroke-color:rgb(223, 19, 155); */
+color: transparent;
+}
+h5{
+    -webkit-text-stroke-color:rgb(245, 230, 18);
+
+}
+div{
+    -webkit-text-stroke-color:chartreuse;
+
+}
+h3{
+    -webkit-text-stroke-color:rgb(232, 58, 10);
+
+}
+a{
+    -webkit-text-stroke-color:rgba(231, 20, 214, 0.91);
+
+}
+  
+.click{
+    position: relative;
+top: 40%;
+}

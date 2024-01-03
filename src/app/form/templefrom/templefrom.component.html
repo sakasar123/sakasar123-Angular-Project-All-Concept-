@@ -1,0 +1,38 @@
+<!-- Template Driven From with validation --> 
+<h1>Template Driven Form</h1>
+<div class=" container-fluid wid">
+  <form #Template="ngForm">
+
+    <input type="text" name="name" #name="ngModel" [(ngModel)]="data.name" placeholder="name"
+          [ngClass]="{'is-invalid': Template.submitted && name.invalid }" required class="form-control">
+
+      <div class="invalid-feedback">
+          <div *ngIf="Template.submitted && name.invalid">
+              Name is Required
+          </div>
+      </div>
+<br> 
+      <input type="text" name="username" #userName="ngModel" [(ngModel)]="data.userName" placeholder="userName"
+          [ngClass]="{'is-invalid': Template.submitted && userName.invalid }" required class="form-control">
+
+      <div class="invalid-feedback">
+          <div *ngIf="Template.submitted && userName.invalid">
+              userName is Required
+          </div>
+      </div>
+
+      <br> 
+      <input type="text" name="Email" #Email="ngModel" [(ngModel)]="data.Email" placeholder="Email"
+          [ngClass]="{'is-invalid': Template.submitted && Email.invalid }" required class="form-control">
+
+      <div class="invalid-feedback">
+          <div *ngIf="Template.submitted && Email.invalid">
+              Email is Required
+          </div>
+      </div>
+<br>
+<div></div>
+      <button class="btn btn-danger" type="reset">Reset</button>
+      <button class="btn btn-primary ml-2" (click)="successmsg()" (click)="Submit(Template.value)">Submit</button>
+  </form>
+</div>

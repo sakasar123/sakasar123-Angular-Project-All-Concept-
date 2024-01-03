@@ -1,0 +1,18 @@
+<p>s-ng-switch works!</p>
+   <!--Structural Directive ng Switch -->
+   <h1>Structural Directive ng Switch</h1>
+   <div class="col-md-4 text-center ml-5">
+       <select (change)="SetProgramminglanguage ($event)">
+           <option value="defaultOption">please select Programming langauge</option>
+           <option value="java">java</option>
+           <option value="Typescript">Typescript</option>
+           <option value="Angular">Angular</option>
+       </select>
+   </div>
+   <br>
+   <div class="col-md-12" [ngSwitch]="SelectedProgramminglanguage">
+       <h2 *ngSwitchCase="'java'">java</h2>
+       <h2 *ngSwitchCase="'Typescript'">Typescript</h2>
+       <h3 *ngSwitchCase="'Angular'">Angular</h3>
+       <!-- <h2 *ngSwitch Default>please select Programming langauge</h2> -->
+   </div>

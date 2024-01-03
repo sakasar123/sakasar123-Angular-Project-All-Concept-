@@ -1,0 +1,16 @@
+button{
+    width: 120px;
+    height: 50px;
+    background-color:rgb(115, 68, 160);
+    color: #f3ebf3;
+    font-size: 25px;
+}
+.wid{
+    padding: 20px 30px 20px 30px;
+    }
+
+    input{
+        width:250px;
+        background-color:rgb(245, 242, 247);
+        font-size: 20px;
+       }

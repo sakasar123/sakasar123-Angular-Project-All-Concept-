@@ -1,0 +1,25 @@
+<p>pipes works!</p>
+  
+  
+    <!--Advance Pipes -->
+    <div class="ml-5">
+        <h1>{{ Title1 | lowercase }}</h1>
+        <h1>{{ Title1 | slice :2 :5}}</h1>
+        <h1>{{2.3 |number :'4.5-5'}}</h1>
+        <h1>{{user | json |uppercase }}</h1>
+        <!-- Here is  i  did  1st  latter  capital and  other all smaller -->
+        <h2>{{ "hello how are you" | slice:0:3 | uppercase }}</h2>
+        <h2> {{ "hello how are you" | slice:1 | lowercase }}</h2>
+        <h2>{{ "hello how are you" | titlecase }}</h2>
+      
+        <!-- Great Britan Pounds  -->
+        <h1>{{20 | currency :'GBP'}}</h1>
+      
+        <!-- indian currency -->
+        <h1>{{20 | currency :'INR'}}</h1>
+      
+        <!-- United State Doller -->
+        <h1>{{20 | currency :'USD'}}</h1>
+    </div>
+
+  

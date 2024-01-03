@@ -1,0 +1,58 @@
+  <!-- //Structural Directive ngIf-->
+  <h1>Structural Directive ngIf</h1>
+  <h1 *ngIf="showName"></h1>
+  <h3 *ngIf="showName; else elseBlock;">
+      Developers Marathi
+  </h3>
+  <ng-template #elseBlock>
+      <h2>channelName is hidden</h2>
+  </ng-template>
+  <!-- OR  -->
+  <div class="text-center">
+      <div *ngIf="showName;
+then thenblock; else elseBlock;">
+          sagar
+      </div>
+      <ng-template #thenblock>
+          <h2>kasar</h2>
+      </ng-template>
+      <ng-template #elseBlock>
+          <h2>channelName is hidden</h2>
+      </ng-template>
+  </div>
+  <br>
+
+ 
+  <!-- OR different type html ngIf-->
+  <div class="text-center">
+      <h2 *ngIf="!isChange" class="text-danger">
+          sagar kasar</h2>
+      <h3  *ngIf="isChange" class="text-info">
+          SAGAR KASAR</h3>
+      <button class="btn btn-primary" (click)="Change()">
+          change your words</button>
+  </div>
+
+
+
+
+
+  
+<!-- code of    *ngIf structural directive for hide and show with background -->
+<div *ngIf="showData" class="color">
+    <h2>   *ngIf structural directive for hide and show with background
+    </h2>
+    </div>
+    <div *ngIf="!showData">
+    <h3>  click on click me button and show hide data
+    </h3>
+    </div>
+    <button (click)="show()">click me</button>
+    
+    
+      <!-- here use ngClass -->
+    
+    <div [ngClass]="{'class':!showData}">
+    
+    
+    </div>
